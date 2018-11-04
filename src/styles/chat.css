@@ -1,0 +1,152 @@
+/*
+BLUE : #0984e3
+GRAY : #ced4da
+ */
+
+html,body {
+    height: 100%;
+    background-color: #f7f9fb;
+    font-size: 14px;;
+    overflow-y: hidden;
+}
+
+
+wrapper {
+    display: flex;
+    align-items: stretch;
+}
+
+#sidebar {
+    min-width: 75px;
+    max-width: 75px;
+    min-height: calc(100vh - 47px);
+    -webkit-box-shadow: 8px 0 4px -4px rgba(0, 0, 0, 0.05);
+    box-shadow: 8px 0 4px -4px rgba(0, 0, 0, 0.05);
+}
+
+#sidebar.active {
+    margin-left: -75px;
+}
+
+a[data-toggle="collapse"] {
+    position: relative;
+}
+
+.dropdown-toggle::after {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+@media (max-width: 768px) {
+    #sidebar {
+        margin-left: -250px;
+    }
+    #sidebar.active {
+        margin-left: 0;
+    }
+}
+
+.navbar-custom {
+    background:  #0984e3;
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1em;
+    font-weight: 300;
+    line-height: 1.7em;
+    color: #999;
+}
+
+a, a:hover, a:focus {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+#sidebar {
+    /* don't forget to add all the previously mentioned styles here too */
+    background: #fff;
+    color: black;
+    transition: all 0.3s;
+
+}
+
+#sidebar .sidebar-header {
+    padding: 0 20px;
+    background:  #fff;
+}
+
+#sidebar ul.components {
+    padding: 20px 0;
+    border-bottom: 1px solid #47748b;
+}
+
+#sidebar ul p {
+    color: black;
+    padding: 10px;
+}
+
+#sidebar ul li a {
+    padding: 10px;
+    font-size: 1.1em;
+    display: block;
+}
+#sidebar ul li a:hover {
+    color:  black;
+    background: #fff;
+}
+
+#sidebar ul li.active > a, a[aria-expanded="true"] {
+    color: black;
+    background:  #fff;
+}
+ul ul a {
+    font-size: 0.9em !important;
+    padding-left: 30px !important;
+    background:  #fff;
+}
+
+.list-unstyled {
+    list-style-type: none;
+}
+
+#sidebar li i {
+    margin-top:25px;
+    margin-bottom:25px;
+    color: #ced4da;
+}
+
+#sidebar li i {
+    cursor: pointer;
+}
+
+#sidebar li.active > i, #sidebar li:hover > i {
+    cursor:pointer;
+    color: #0984e3;
+
+}
+
+#sidebar li:hover > i {
+    color: #0984e3;
+    transition: color 0.4s ease-in-out;
+}
+
+.avatar {
+    width: 40px;
+    vertical-align: middle;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.nickname {
+    color: #fff;
+    font-weight: bold;
+    vertical-align: middle;
+    text-transform: uppercase;
+    letter-spacing:1px;
+}
